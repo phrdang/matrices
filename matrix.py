@@ -41,6 +41,14 @@ class Row(object):
         '''
         # to do
         pass
+    def __eq__(self, row):
+        '''
+        row: another Row object
+
+        Equal to method, returns True if rows are equivalent, else False
+        '''
+        # to do
+        pass
 
 # =================================
 # Col Class
@@ -62,12 +70,21 @@ class Col(object):
         '''
         # to do
         pass
+    def __eq__(self, col):
+        '''
+        col: another Col object
+
+        Equal to method, returns True if cols are equivalent, else False
+        '''
+        # to do
+        pass
 
 # =================================
 # Matrix Class
 # =================================
 
 class Matrix(object):
+    id = 0 
     def __init__(self, rows, cols):
         ''' 
         Initializes a Matrix object
@@ -75,45 +92,53 @@ class Matrix(object):
         rows: list of lists of the entries in each row
         cols: list of lists of the entries in each column
         '''
-        # initialize row and col objects
+        # rows, list of lists of entries in each row
+        self.rows = []
+
+        # cols, list of lists of entries in each col
+        self.cols = []
+
         # implement matrix IDs
+        self.id = id
+        id += 1
+
+        # initialize row and col objects
+
         pass
 
     def getID(self):
         '''
         Returns the ID of the Matrix, an int
         '''
-        # to do
-        pass
+        return self.id
 
     def getNumRows(self):
         '''
         Returns the number of rows in the Matrix
         '''
-        # to do
-        pass
+        return len(self.rows)
 
     def getNumCols(self):
         '''
         Returns the number of cols in the Matrix
         '''
-        # to do
-        pass
+        return len(self.cols)
 
     def getDimension(self):
         '''
-        Returns the dimension of the Matrix
+        Returns the dimension of the Matrix, a str
+        RxC
         '''
-        # use getNumRows and getNumCols
-        pass
+        return str(self.getNumRows()) + "x" + str(self.getNumCols())
     
     def isSquare(self):
         '''
         Returns True if the Matrix is a square Matrix, else False
         '''
-        # use getDimension
-        # to do
-        pass
+        if self.getNumRows() == self.getNumCols():
+            return True
+        else:
+            return False
 
     def getRow(self, row):
         '''
@@ -203,6 +228,24 @@ class Matrix(object):
         # to do
         pass
 
+    def __eq__(self, matrix):
+        '''
+        matrix: a Matrix object
+
+        Equal to method, returns True if matrices are equivalent, else False
+        '''
+        # Checks if they are the same dimensions
+        if self.getDimension() == matrix.getDimension():
+            # If they are the same dimensions, then check the corresponding rows of each matrix
+            for i in range(0, len(self.rows) - 1):
+                # If any of the rows do not match, return False
+                if not self.rows[i] == matrix.rows[i]:
+                    return False
+            return True
+        # If not same dimensions, return False
+        else:
+            return False
+
 # =================================
 # Matrix Operations (Functions)
 # =================================
@@ -227,6 +270,10 @@ def scale_matrix(matrix, scale_factor):
     # to do
     pass
 
+# =======================================================================
+# Replace these functions with __add__ and __mul__ and __rmul__ methods
+# =======================================================================
+
 def add_matrices(a, b):
     '''
     a, b: Matrix objects with the same dimensions
@@ -244,6 +291,8 @@ def multiply_matrices(a, b):
     '''
     # to do
     pass
+
+# =======================================================================
 
 def create_identity_matrix(dimension):
     '''
