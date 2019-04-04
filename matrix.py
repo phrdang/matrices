@@ -76,6 +76,14 @@ class Matrix(object):
         cols: list of lists of the entries in each column
         '''
         # initialize row and col objects
+        # implement matrix IDs
+        pass
+
+    def getID(self):
+        '''
+        Returns the ID of the Matrix, an int
+        '''
+        # to do
         pass
 
     def getNumRows(self):
@@ -254,6 +262,16 @@ def is_inverse(a, b):
     '''
     # to do
     pass
+
+def print_all_matrices():
+    '''
+    Prints all matrices stored in the program session
+
+    Returns: None
+    '''
+    # to do
+    pass
+
 
 # =================================
 # User Interface
