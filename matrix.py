@@ -19,5 +19,194 @@ Use python classes to:
     -multiply matrices
 
     -find cofactors, minors, determinants
+    -find REF, RREF
 2. Be able to encode and decode messages using matrices
 '''
+
+# =================================
+# Row Class
+# =================================
+
+class Row(object):
+    def __init__(self):
+        '''
+        Initializes a Row object, a row of a Matrix object
+        '''
+        # to do
+        pass
+    def __str__(self):
+        '''
+        String method to print the Row formatted as such:
+        [ # # # ... # ]
+        '''
+        # to do
+        pass
+
+# =================================
+# Col Class
+# =================================
+
+class Col(object):
+    def __init(self):
+        '''
+        '''
+        # to do
+        pass
+    def __str__(self):
+        '''
+        String method to print the Col formatted as such:
+        [ # ]
+        [ . ]
+        [ . ]
+        [ # ]
+        '''
+        # to do
+        pass
+
+# =================================
+# Matrix Class
+# =================================
+
+class Matrix(object):
+    def __init__(self, rows, cols):
+        ''' 
+        Initializes a Matrix object
+
+        rows: list of lists of the entries in each row
+        cols: list of lists of the entries in each column
+        '''
+        # initialize row and col objects
+        pass
+
+    def getNumRows(self):
+        '''
+        Returns the number of rows in the Matrix
+        '''
+        # to do
+        pass
+
+    def getNumCols(self):
+        '''
+        Returns the number of cols in the Matrix
+        '''
+        # to do
+        pass
+
+    def getDimension(self):
+        '''
+        Returns the dimension of the Matrix
+        '''
+        # use getNumRows and getNumCols
+        pass
+
+    def getRow(self, row):
+        '''
+        Returns the row object of the row number, row (an int)
+        '''
+        # to do
+        pass
+
+    def getCol(self, col):
+        '''
+        Returns the col object of the col number, col (an int)
+        '''
+        # to do
+        pass
+
+    def getMinor(self, row, col):
+        '''
+        row: int, the row of the entry
+        col: int, the col of the entry
+
+        Returns the minor of an entry in the Matrix
+        '''
+        # to do
+        pass
+
+    def getCofactor(self, row, col):
+        '''
+        row: int, the row of the entry
+        col: int, the col of the entry
+
+        Returns the cofactor of an entry in the Matrix
+        '''
+        # to do
+        pass
+
+    def getDeterminant(self):
+        '''
+        Returns the determinant of the Matrix
+        '''
+        # to do
+        pass
+
+    def getREF(self):
+        '''
+        Returns a Matrix object, the Row-Echelon Form (REF) of the Matrix
+        '''
+        # to do
+        pass
+
+    def getRREF(self):
+        '''
+        Returns a Matrix object, the Reduced Row-Echelon Form (RREF) of the Matrix
+        '''
+        # to do
+        pass
+
+    def getInverse(self):
+        '''
+        Returns a Matrix object, the inverse of the Matrix
+        Returns None if the Matrix is non-invertible 
+        '''
+        # to do
+        pass
+        
+    def __str__(self):
+        '''
+        String method to print the entire Matrix formatted as such:
+        [ # # # ... # ]
+        [ . . . ... . ]
+        [ . . . ... . ]
+        [ # # # ... # ]
+        '''
+        # to do
+        pass
+
+# =================================
+# Matrix Operations (Functions)
+# =================================
+
+def create_matrix():
+    '''
+    Creates a Matrix object from user input
+
+    Returns: None
+    '''
+    # take in user input
+    # initialize a matrix object
+    pass
+
+def add_matrices(a, b):
+    '''
+    a, b: Matrix objects with the same dimensions
+
+    Returns a Matrix object, the sum/difference of matrices a and b
+    '''
+    # to do
+    pass
+
+def multiply_matrices(a, b):
+    '''
+    a, b: Matrix objects with the same inner dimensions
+
+    Returns a Matrix object, the product of matrices a and b
+    '''
+    # to do
+    pass
+
+# =================================
+# User Interface
+# =================================
+
+# to do
