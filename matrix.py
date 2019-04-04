@@ -47,7 +47,7 @@ class Row(object):
 # =================================
 
 class Col(object):
-    def __init(self):
+    def __init__(self):
         '''
         '''
         # to do
@@ -97,6 +97,14 @@ class Matrix(object):
         Returns the dimension of the Matrix
         '''
         # use getNumRows and getNumCols
+        pass
+    
+    def isSquare(self):
+        '''
+        Returns True if the Matrix is a square Matrix, else False
+        '''
+        # use getDimension
+        # to do
         pass
 
     def getRow(self, row):
@@ -154,6 +162,20 @@ class Matrix(object):
         # to do
         pass
 
+    def isInREF(self):
+        '''
+        Returns True if the Matrix is in REF, else False
+        '''
+        # to do
+        pass
+
+    def isInRREF(self):
+        '''
+        Returns True if the Matrix is in RREF, else False
+        '''
+        # to do
+        pass
+
     def getInverse(self):
         '''
         Returns a Matrix object, the inverse of the Matrix
@@ -161,7 +183,7 @@ class Matrix(object):
         '''
         # to do
         pass
-        
+
     def __str__(self):
         '''
         String method to print the entire Matrix formatted as such:
@@ -187,6 +209,16 @@ def create_matrix():
     # initialize a matrix object
     pass
 
+def scale_matrix(matrix, scale_factor):
+    '''
+    matrix: a Matrix object
+    scale_factor: int, the factor the user wants to scale the given matrix by
+
+    Returns a Matrix object, the scaled version of the inputted matrix
+    '''
+    # to do
+    pass
+
 def add_matrices(a, b):
     '''
     a, b: Matrix objects with the same dimensions
@@ -201,6 +233,24 @@ def multiply_matrices(a, b):
     a, b: Matrix objects with the same inner dimensions
 
     Returns a Matrix object, the product of matrices a and b
+    '''
+    # to do
+    pass
+
+def create_identity_matrix(dimension):
+    '''
+    dimension: int, the number of rows/cols of the identity matrix
+
+    Returns a Matrix object, the identity matrix with the dimension passed in
+    '''
+    # to do
+    pass
+
+def is_inverse(a, b):
+    '''
+    a, b: Matrix objects with the same dimensions
+
+    Returns True if a and b are inverses, else False
     '''
     # to do
     pass
